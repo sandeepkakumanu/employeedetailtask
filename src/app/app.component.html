@@ -1,0 +1,74 @@
+<div class="container">
+  <h2>Employee Details</h2>
+       
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>id</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>email</th>
+        <th>Modal</th>
+      </tr>
+    </thead>
+    <tbody class= "sample">
+      <tr *ngFor="let i of data">
+          <td>{{i.id}}</td>
+        <td>{{i.firstname}}</td>
+        <td>{{i.lastname}}</td>
+        <td>{{i.email}}</td>
+        <td>
+          <button (click)="fun(i)" data-toggle="modal" data-target="#my">Click Button</button>
+        </td>
+        
+      </tr>
+      <div id="my" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+      
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-target="dismiss" >&times;</button>
+              
+            </div>
+            <div class="modal-body">
+          <table>
+            <thead>
+              <tr>
+                <th>id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>email</th>
+      
+              </tr>
+            </thead>
+            <tbody>
+              <tr >
+
+              
+                <td>{{eid}}</td>
+                <td>{{firstname}}</td>
+                <td>{{lastname}}</td>
+                <td>{{email}}</td>
+                
+              </tr>
+            </tbody>
+
+
+
+          </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+      
+        </div>
+      </div>
+    </tbody>
+    
+  </table>
+</div>
+
+
+<router-outlet></router-outlet>

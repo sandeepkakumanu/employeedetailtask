@@ -1,0 +1,14 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 15px;
+  }
+  thead, th{
+      background-color: #1D62A7;
+      color: white;
+  }
+  .sample:hover{
+
+  }
